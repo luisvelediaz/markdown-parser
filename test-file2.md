@@ -1,1 +1,1 @@
-[link1https://something.com)
+[link1(https://something.com)

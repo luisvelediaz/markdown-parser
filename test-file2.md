@@ -1,3 +1,1 @@
-[Link][1]
-⋮
-[1]: http://b.org
+[link1https://something.com)

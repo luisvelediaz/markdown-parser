@@ -1,5 +1,2 @@
-# Title
 
-[Link][1]
-⋮
-[1]: http://something.org
+[link1https://something.com)

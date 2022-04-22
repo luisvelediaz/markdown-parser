@@ -12,11 +12,16 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 6281ce1a5722f15cd9751e8953e6cbf13db09a12
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
+<<<<<<< HEAD
             
             if (markdown.contains("[") && markdown.contains("]")){
                 
@@ -34,12 +39,25 @@ public class MarkdownParse {
 
 
             
+=======
+
+
+            toReturn.add(markdown.substring(openParen + 1, closeParen));
+
+
+            if (toReturn.get(toReturn.size()-1).contains("[")){
+                toReturn.remove(toReturn.size()-1);
+            }
+
+>>>>>>> 6281ce1a5722f15cd9751e8953e6cbf13db09a12
 
         }
+        
+
+    
 
         return toReturn;
     }
-
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);

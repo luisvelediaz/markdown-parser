@@ -27,12 +27,12 @@ public class MarkdownParseTest {
         Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser2/test2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = new MarkdownParse().getLinks(content);
-	    assertEquals(List.of("https://test.com","https://test.com"),links); 
+	    assertEquals(List.of("https://test.com",0,links.size())); 
     }
     @Test
     public void getImageLinkTest() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser2/test3.md");
+        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser2/test4.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());

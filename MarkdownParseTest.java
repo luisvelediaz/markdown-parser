@@ -23,13 +23,6 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void getLinksForMyTestFile() throws IOException{
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser2/test2.md");
-        String content = Files.readString(fileName);
-        ArrayList<String> links = new MarkdownParse().getLinks(content);
-	    assertEquals(List.of("https://test.com",0,links.size())); 
-    }
-    @Test
     public void getImageLinkTest() throws IOException
     {
         Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser2/test4.md");

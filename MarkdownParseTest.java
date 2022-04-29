@@ -93,4 +93,13 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList",0,links.size());
     }
+
+    @Test
+    public void getLinksTest5() throws IOException{
+        Path filePath = Path.of("test-file.md");
+        String contents = Files.readString(filePath);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        assertEquals("",links.get(1));
+
+    }
 }

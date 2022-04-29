@@ -34,12 +34,6 @@ public class MarkdownParse {
                     toReturn.add(markdown.substring(openParen + 1, closeParen));
                     currentIndex = closeParen + 1;
                 }
-             else if (closeParen == openParen+1) { // skips if there's nothing inside parenthesis ()
-            currentIndex = closeBracket+1;}
-                else
-                {
-                    currentIndex = closeParen + 1;
-                }
             }
             else
             {

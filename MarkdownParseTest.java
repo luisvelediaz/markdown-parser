@@ -14,7 +14,7 @@ public class MarkdownParseTest {
     @Test
     public void getLinksTest() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file.md");
+        Path fileName = Path.of("test-file.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("The link should be https://something.com","https://something.com",links.get(0));
@@ -24,7 +24,7 @@ public class MarkdownParseTest {
     @Test
     public void getImageLinkTest() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/imagelink.md");
+        Path fileName = Path.of("imagelink.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
@@ -33,7 +33,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile2() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file2.md");
+        Path fileName = Path.of("test-file2.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("The link should be https://something.com","https://something.com",links.get(0));
@@ -43,7 +43,7 @@ public class MarkdownParseTest {
     @Test 
     public void testfile3() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file3.md");
+        Path fileName = Path.of("test-file3.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
@@ -52,7 +52,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile4() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file4.md");
+        Path fileName = Path.of("test-file4.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
@@ -61,7 +61,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile5() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file5.md");
+        Path fileName = Path.of("test-file5.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
@@ -70,7 +70,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile6() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file6.md");
+        Path fileName = Path.of("test-file6.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
@@ -79,7 +79,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile7() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file7.md");
+        Path fileName = Path.of("test-file7.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
@@ -88,7 +88,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile8() throws IOException
     {
-        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/test-file6.md");
+        Path fileName = Path.of("test-file6.md");
         String fileContent = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList",0,links.size());

@@ -58,7 +58,9 @@ public class MarkdownParseTest {
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
     }
 
-/*    @Test
+
+/*
+    @Test
     public void testfile5() throws IOException
     {
         Path fileName = Path.of("test-file5.md");
@@ -66,8 +68,7 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(fileContent);
         assertEquals("There should be nothing in the arrayList of links",0,links.size());
     }
-
-  */
+*/
     @Test
     public void testfile6() throws IOException
     {
@@ -95,6 +96,31 @@ public class MarkdownParseTest {
         assertEquals("There should be nothing in the arrayList",0,links.size());
     }
 
+    @Test
+    public void testSnip1() throws IOException
+    {
+        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/testsnippet1.md");
+        String fileContent = Files.readString(fileName);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        assertEquals(List.of("%60google.com", "google.com", "ucsd.edu"),links);
+    }
 
+    @Test
+    public void testSnip2() throws IOException
+    {
+        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/testsnippet2.md");
+        String fileContent = Files.readString(fileName);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        assertEquals(List.of("a.com", "a.com(())", "example.com"),links);
+    }
+
+    @Test
+    public void testSnip3() throws IOException
+    {
+        Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/testsnippet3.md");
+        String fileContent = Files.readString(fileName);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"),links);
+    }
 }
 

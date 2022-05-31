@@ -1,5 +1,1 @@
-[a [nested link](a.com)](b.com)
-
-[a nested parenthesized url](a.com(()))
-
-[some escaped \[ brackets \]](example.com)
+![[[foo](uri1)](uri2)](uri3)

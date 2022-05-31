@@ -101,7 +101,7 @@ public class MarkdownParseTest {
     {
         Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/testsnippet1.md");
         String fileContent = Files.readString(fileName);
-        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        ArrayList<String> links = new MarkdownParse().getLinks(fileContent);
         assertEquals(List.of("%60google.com", "google.com", "ucsd.edu"),links);
     }
 
@@ -110,7 +110,7 @@ public class MarkdownParseTest {
     {
         Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/testsnippet2.md");
         String fileContent = Files.readString(fileName);
-        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        ArrayList<String> links = new MarkdownParse().getLinks(fileContent);
         assertEquals(List.of("a.com", "a.com(())", "example.com"),links);
     }
 
@@ -119,7 +119,7 @@ public class MarkdownParseTest {
     {
         Path fileName = Path.of("/Users/luisvelediaz/Documents/GitHub/markdown-parser/testsnippet3.md");
         String fileContent = Files.readString(fileName);
-        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        ArrayList<String> links = new MarkdownParse().getLinks(fileContent);
         assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"),links);
     }
 }
